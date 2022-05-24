@@ -1,0 +1,105 @@
+.flexbox-center, #box #box-bar, #box #box-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button-style1, #box #box-bar #connect-btn, #box #box-bar #message-btn {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 8px 10px;
+  font-size: 1.1rem;
+  margin-top: 50px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+body {
+  font-family: -Verdana, Geneva, Tahoma, sans-serif;
+  color: #32325d;
+  background: white;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  height: 60vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#1b0fed), color-stop(58%, #9e36e3), color-stop(90%, #bd04c8), to(#ff00b9));
+  background: linear-gradient(90deg, #1b0fed 0%, #9e36e3 58%, #bd04c8 90%, #ff00b9 100%);
+  -webkit-clip-path: polygon(100% 78%, 100% 0, 0 0, 0 100%);
+          clip-path: polygon(100% 78%, 100% 0, 0 0, 0 100%);
+}
+
+#box {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 70%;
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 10px -5px #5a5656;
+          box-shadow: 0px 0px 10px -5px #5a5656;
+  margin: -200px auto 0 auto;
+  padding-bottom: 100px;
+  z-index: 9;
+}
+
+#box #box-bar {
+  height: 100px;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#box #box-bar #image-area {
+  height: 250px;
+  width: 250px;
+  background-color: #dfdfdf;
+  background-image: url(https://cdn.dribbble.com/users/2313212/screenshots/11256142/media/27b57b3ee2ac221dc8c616d02161d96b.jpg?compress=1&resize=400x300&vertical=top);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  border-radius: 50%;
+  -webkit-transform: translate(0, -35%);
+          transform: translate(0, -35%);
+}
+
+#box #box-bar #connect-btn {
+  background-color: #ff00b9;
+}
+
+#box #box-bar #message-btn {
+  background-color: #1b0fed;
+}
+
+#box #box-content {
+  padding-top: 100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #32325d;
+}
+
+#box #box-content h3 {
+  font-size: 2rem;
+  margin: 0 0 -10px 0;
+}
+
+#box #box-content p {
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=styles.css.map */
