@@ -1,0 +1,93 @@
+$font-famaly: Helvetica, sans-serif;
+$text-color: #32325d;
+$color1: rgba(27,15,237,1);
+$color2: rgba(255,0,185,1);
+
+@mixin hieght-width($h: 100%,$w: 100%){
+  height: $h;
+  width: $w;
+}
+
+.flexbox-center{
+  display: flex;
+  justify-content: center;
+}
+.button-style1{
+  height: fit-content;
+  padding: 8px 10px ;
+  font-size: 1.1rem;
+  margin-top: 50px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+body {
+  font-family: - Verdana, Geneva, Tahoma, sans-serif;
+  color: $text-color;
+  background: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  @include hieght-width(60vh, 100%);
+  background: linear-gradient(90deg, rgba(27,15,237,1) 0%, rgba(158,54,227,1) 58%, rgba(189,4,200,1) 90%, rgba(255,0,185,1) 100%);
+  clip-path: polygon(100% 78%, 100% 0, 0 0, 0 100%);
+}
+
+#box{
+  @include hieght-width(fit-content, 70% );
+  position: relative;
+  background-color: white;
+  box-shadow:  0px 0px 10px -5px #5a5656;
+  // margin: 0 auto;
+  // margin-top: -200px;
+  margin: -200px auto 0 auto;
+  padding-bottom: 100px;
+  z-index: 9;
+  #box-bar{
+    @extend .flexbox-center;
+    @include hieght-width(100px, 100% );
+    justify-content: space-around;
+
+    #image-area{
+      @include hieght-width(250px, 250px );
+      background-color: rgb(223, 223, 223);
+      background-image: url(https://cdn.dribbble.com/users/2313212/screenshots/11256142/media/27b57b3ee2ac221dc8c616d02161d96b.jpg?compress=1&resize=400x300&vertical=top);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      border-radius: 50%;
+      transform: translate(0, -35%);
+    }
+    #connect-btn{
+      @extend .button-style1;
+      background-color: $color2;
+    }
+    #message-btn{
+      @extend .button-style1;
+      background-color: $color1;
+    }
+    
+  }
+  #box-content{
+    @extend .flexbox-center;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    color: $text-color;
+    h3{
+      font-size: 2rem;
+      margin: 0 0 -10px 0;
+    }
+    p{
+      font-size: 1.3rem;
+    }
+  }
+}
